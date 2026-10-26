@@ -33,3 +33,6 @@ needs a secret.
 Both are pinned to the same full commit SHA, which must be one the Kioskit Worker
 allows. To move the pin, follow the kioskit-publish README's
 [Upgrading](https://github.com/JonathanPorta/kioskit-publish#upgrading-the-publisher) steps.
+
+`blessed.yml` describes this template for its maintainers' tooling, not your copy. You
+can delete it from your repository.
