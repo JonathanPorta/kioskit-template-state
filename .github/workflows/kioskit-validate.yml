@@ -1,0 +1,16 @@
+name: Kioskit validate
+
+# Validates every device folder on pull requests with the same pinned
+# publisher, without publishing. No id-token, so a pull request can never mint
+# a publish token. Keep the pin equal to kioskit-publish.yml's.
+
+on:
+  pull_request:
+
+permissions: {}
+
+jobs:
+  validate:
+    permissions:
+      contents: read
+    uses: JonathanPorta/kioskit-publish/.github/workflows/kioskit-validate.yml@9903e6fdeb89999d5fcb188ec7cc57d8049c14c3
