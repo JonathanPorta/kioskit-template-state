@@ -26,7 +26,8 @@ needs a secret.
 
 - **Kioskit publish** runs on every push to `main` and republishes every device folder.
   It authenticates to Kioskit with the run's GitHub OIDC token. Until you connect the
-  repo in the console, its runs fail with `no_trust_policy`, and that's expected.
+  repo in the console, its runs fail with an HTTP 403 from Kioskit, and that's expected.
+  The job skips in this template repository itself.
 - **Kioskit validate** runs on pull requests and checks every device folder without
   publishing. Make it a required check on `main` to block broken configs before merge.
 
